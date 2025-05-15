@@ -11,19 +11,46 @@
     <section class="menu">
         <div class="menu--area">
             <div class="menu--video-area">
+                <div class="menu--video-ret"> <!-- separando uma area para estilizar   no CSS -->
+                    <div class="menu--video-ret-nav">
+                        <div class="menu--video-ret-logo-area">
+                            <a href="index.html"><img class="menu--video-ret-logo-img" src="assets/Logomarca.png" alt="SALAO SABRINA">
+                            </a>
+                            <div class="texto-logo-area"> <!-- Essa DIV irá funcionar como um bloco para manter o texto em coluna e ficar editável em linha na TAG pai junto com o logomarca-->
+                                <h1 class="texto-logo">Sabrina</h1>
+                                <h2 class="texto2-logo">S A L Ã O</h2>
+                            </div>
+                        </div>  
+                        <nav>
+                        <ul class="menu--video-ret-nav-ul">
+                            <li><a href="sobrenos.html" class="nav-sobrenos">SOBRE  NÓS</a></li>
+                            <li><a href="agendar.html" class="nav-agendar">AGENDAR</a></li>
+                      </nav>  
+                    </div>
+                </div>
                 <video class="menu--video" autoplay loop  muted>
                     <source src="assets/Video principal - Cabelo.mp4" type="video/mp4" />  <!-- Essa TAG esta sendo utilizada para compatibilidade dos navegadores, o navegador acessa ela e escolhe em qual formato ele pode reproduzir o video, no momento só tenho MP4 mas poderia adicionar outros formatos para facilitar o acesso do usuário em outros navegadors e melhorar a compatibilidade do site com os navegadores -->
                 </video> 
             </div>
-            <div class="men--ret--area">
-                <nav>Sobre nós</nav>
-                <nav>Agendas</nav>
-            </div>
         </div>
     </section>
-    <section class="servicos">        
+    <section class="marketing">
+        <div class="marketing--area">
+            <div class="marketing--img">
+
+            </div>
+            <div class="marketing--texto">
+                <h1 class="marketing--texto-titulo">
+                    A melhor equipe <span class="marketing--texto-titulo2">da região</span>
+                </h1> <!--Usando <span> para isolar e estilizar separado no CSS-->
+                <p>
+                    Aqui você encontra uma <span class="negrito">equipe de profissionais</span> com  alta expertise e paixão por realçar sua      beleza.  Cabeleireiros, manicures, maquiadores e especialistas  dedicados a <span class="negrito">oferecer serviços personalizados e de qualidade</span>, sempre atentos às últimas tendências. <span class="negrito">Confie em nossa expertise</span> para transformar sua beleza! 
+                </p>
+
+            </div>
+        </div>        
     </section>
-    <section class="marketing">        
+    <section class="servicos">        
     </section>
     <section class="produtos">
     </section>

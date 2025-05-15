@@ -1,22 +1,142 @@
+/*Fontes que estado sendo usado no site: */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Puppies+Play&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+* {
+  box-sizing: border-box; 
+}
 body{
     margin: 0;
+    padding: 0;
+}
+.negrito{
+  font-weight: bold; /*Class para deixar em toda a página alguns trechos de texto em negrito*/
 }
 
 .menu--area{
   width: 100%;
-  height: 500px;
- background-color: aqua
- ;
+  height: 250px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
+  background-color: black; /*Cor para ajustar a opacidade do video*/ 
 }
 .menu--video-area{ /*Tag pai para controlar a area do video*/
+  position: relative; /*Estou dizendo ao navegador que a posição dessa TAG pai e relativa e vou add em algumas TAG filhos a posição absolute para ficar por cima do video o menu de navegação do site*/
   width: 100%;
-  height: 400px;
+  height: 100%;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);  
 }
 
-.menu--video{ /*TQG filho com o video */
-  display: block; /*Assegurando que não ira ter espaços extras abaixo do video*/
+.menu--video{ /*TAG filho com o video */
+  opacity: 0.40; /*OPACIDADE DO VIDEO | A cor está em <menu--area>*/
   object-fit: cover; /*Video preenchendo area sem muita distorção e cortando se for necessário*/
-  width: 100%; /*Altura*/
-  height: 100%; /*Largura*/
+  width: 100%; /*Largura*/
+  height: 100%; /*Altura*/
   /*Aqui o video irá ocupar 100% da TAG Pai que é <.menu--video-area> mudando o tamanho da TAG pai o vídeo também irá ser alterado*/
 }
+
+.menu--video-ret{  /*Estilização do retângulo*/
+  background-color: #ED6CA5;
+  border-radius: 50px;
+  opacity: 0.90;
+  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.24);
+  width: 700px; /*||<|>|| LARGURA DO RETANGULO| IMPORTANTE ALTERAR PARA DEIXAR ELE RESPONSIVO ||<|>||*/
+
+  /*Posicionando o retângulo do menu: */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 15px;
+  z-index: 10; /*Faz com que o retagunlo fique por cima do vídeo, por padrão as tags recebe um valor z-index, ao colocar um valor maior, você esta dando enfâse e garantido que a ordem que você deseja seja respeitado*/
+
+  /*Centralizando o retangulo*/
+  position: absolute; /*Ele não vai acompanhar o rolamento*/
+  top: 50%; /* Posiciona o topo do elemento no centro vertical da tela */
+  left: 50%; /* Posiciona a esquerda do elemento no centro horizontal da tela, idepedente o do tamanho */
+  transform: translate(-50%, -50%); /* Centraliza o elemento subtraindo metade da sua largura e altura, técnica para centralizar, lembrando que ele trabalha com X e Y*/ 
+}
+.menu--video-ret-nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.menu--video-ret-nav-ul{ /*Estilizando e posicionando o <NAV>*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 90px;
+  margin-left: 110px;
+  list-style: none;
+}
+
+/*Estilizando o texto em si do <NAV>*/
+.nav-sobrenos{
+  text-decoration: none;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 275;
+  line-height: normal;
+  letter-spacing: 5px;
+}
+.nav-agendar{
+  text-decoration: none;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 275;
+  line-height: normal;
+  letter-spacing: 5px;
+}
+/*----------------------------------------------------------------------------------*/
+ /*Inciando estilização de Logomarca*/
+.menu--video-ret-logo-area{ /*Controlando a posição do texto e da logomarca em linha*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+.menu--video-ret-logo-img{ /*Controlando tamanho da logomarca*/
+  object-fit: contain;
+  width: 50px;
+  height: 50px;
+}
+.texto-logo-area{ /*Controlando texto em coluna*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+}
+.texto-logo{
+  color: #FFF;
+  text-shadow: 0px 6px 12px rgba(0, 0, 0, 0.24);
+  font-family: "Puppies Play";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0px 0px 0px 0px;
+}
+.texto2-logo{
+  color: #FFF;
+  text-shadow: 0px 6px 12px rgba(0, 0, 0, 0.24);
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0px 0px 0px 0px;
+  }
+/*FIM DE ESTILIZAÇÃO DO MENU*/
+/*-------------------------------------------------------------------------------------*/
+
+
+  .marketing{
+    background-color: blue;
+    width: 100%;
+    height: 500px;
+  }
+  .marketing--texto-titulo{
+
+  }
