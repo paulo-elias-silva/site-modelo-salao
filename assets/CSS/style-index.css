@@ -1,142 +1,282 @@
 /*Fontes que estado sendo usado no site: */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Puppies+Play&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-
+html{
+  font-size: 16px; /* Tamanho de fonte base */
+}
 * {
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 body{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  text-shadow: 0rem 0.05rem 0.06rem rgba(0, 0, 0, 0.16);
 }
 .negrito{
   font-weight: bold; /*Class para deixar em toda a página alguns trechos de texto em negrito*/
 }
 
-.menu--area{
-  width: 100%;
-  height: 250px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
-  background-color: black; /*Cor para ajustar a opacidade do video*/ 
-}
-.menu--video-area{ /*Tag pai para controlar a area do video*/
-  position: relative; /*Estou dizendo ao navegador que a posição dessa TAG pai e relativa e vou add em algumas TAG filhos a posição absolute para ficar por cima do video o menu de navegação do site*/
-  width: 100%;
-  height: 100%;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);  
-}
-
-.menu--video{ /*TAG filho com o video */
-  opacity: 0.40; /*OPACIDADE DO VIDEO | A cor está em <menu--area>*/
-  object-fit: cover; /*Video preenchendo area sem muita distorção e cortando se for necessário*/
-  width: 100%; /*Largura*/
-  height: 100%; /*Altura*/
-  /*Aqui o video irá ocupar 100% da TAG Pai que é <.menu--video-area> mudando o tamanho da TAG pai o vídeo também irá ser alterado*/
-}
-
-.menu--video-ret{  /*Estilização do retângulo*/
-  background-color: #ED6CA5;
-  border-radius: 50px;
-  opacity: 0.90;
-  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.24);
-  width: 700px; /*||<|>|| LARGURA DO RETANGULO| IMPORTANTE ALTERAR PARA DEIXAR ELE RESPONSIVO ||<|>||*/
-
-  /*Posicionando o retângulo do menu: */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  gap: 15px;
-  z-index: 10; /*Faz com que o retagunlo fique por cima do vídeo, por padrão as tags recebe um valor z-index, ao colocar um valor maior, você esta dando enfâse e garantido que a ordem que você deseja seja respeitado*/
-
-  /*Centralizando o retangulo*/
-  position: absolute; /*Ele não vai acompanhar o rolamento*/
-  top: 50%; /* Posiciona o topo do elemento no centro vertical da tela */
-  left: 50%; /* Posiciona a esquerda do elemento no centro horizontal da tela, idepedente o do tamanho */
-  transform: translate(-50%, -50%); /* Centraliza o elemento subtraindo metade da sua largura e altura, técnica para centralizar, lembrando que ele trabalha com X e Y*/ 
-}
-.menu--video-ret-nav{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.menu--video-ret-nav-ul{ /*Estilizando e posicionando o <NAV>*/
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 90px;
-  margin-left: 110px;
-  list-style: none;
-}
-
-/*Estilizando o texto em si do <NAV>*/
-.nav-sobrenos{
-  text-decoration: none;
-  color: #FFF;
-  font-family: Poppins;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 275;
-  line-height: normal;
-  letter-spacing: 5px;
-}
-.nav-agendar{
-  text-decoration: none;
-  color: #FFF;
-  font-family: Poppins;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 275;
-  line-height: normal;
-  letter-spacing: 5px;
-}
-/*----------------------------------------------------------------------------------*/
- /*Inciando estilização de Logomarca*/
-.menu--video-ret-logo-area{ /*Controlando a posição do texto e da logomarca em linha*/
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 5px;
-}
-.menu--video-ret-logo-img{ /*Controlando tamanho da logomarca*/
-  object-fit: contain;
-  width: 50px;
-  height: 50px;
-}
-.texto-logo-area{ /*Controlando texto em coluna*/
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0px;
-}
-.texto-logo{
-  color: #FFF;
-  text-shadow: 0px 6px 12px rgba(0, 0, 0, 0.24);
-  font-family: "Puppies Play";
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin: 0px 0px 0px 0px;
-}
-.texto2-logo{
-  color: #FFF;
-  text-shadow: 0px 6px 12px rgba(0, 0, 0, 0.24);
-  font-family: Poppins;
-  font-size: 10px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  margin: 0px 0px 0px 0px;
-  }
-/*FIM DE ESTILIZAÇÃO DO MENU*/
-/*-------------------------------------------------------------------------------------*/
-
-
-  .marketing{
-    background-color: blue;
+/*Inicio da estilização do MENU*/
+  .menu--area{
     width: 100%;
-    height: 500px;
+    height: 15.625rem; /* 250px / 16px = 15.625rem */
+    box-shadow: 0px 0.0625rem 0.1875rem rgba(0, 0, 0, 0.12); /* 1px / 16px = 0.0625rem, 3px / 16px = 0.1875rem */
+    background-color: black; /*Cor para ajustar a opacidade do video*/
+  }
+  .menu--video-area{ /*Tag pai para controlar a area do video*/
+    position: relative; /*Estou dizendo ao navegador que a posição dessa TAG pai e relativa e vou add em algumas TAG filhos a posição absolute para ficar por cima do video o menu de navegação do site*/
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0.0625rem 0.1875rem rgba(0, 0, 0, 0.12);
+  }
+  .menu--video{ /*TAG filho com o video */
+    opacity: 0.40; /*OPACIDADE DO VIDEO | A cor está em <menu--area>*/
+    object-fit: cover; /*Video preenchendo area sem muita distorção e cortando se for necessário*/
+    width: 100%; /*Largura*/
+    height: 100%; /*Altura*/
+    /*Aqui o video irá ocupar 100% da TAG Pai que é <.menu--video-area> mudando o tamanho da TAG pai o vídeo também irá ser alterado*/
+  }
+  .menu--video-ret{  /*Estilização do retângulo*/
+    background-color: #ED6CA5;
+    border-radius: 3.125rem; /* 50px / 16px = 3.125rem */
+    opacity: 0.90;
+    box-shadow: 0px 0.375rem 0.75rem 0px rgba(0, 0, 0, 0.24); /* 6px / 16px = 0.375rem, 12px / 16px = 0.75rem */
+    width: 43.75rem; /* 700px / 16px = 43.75rem */
+
+    /*Posicionando o retângulo do menu: */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0.9375rem; /* 15px / 16px = 0.9375rem */
+    z-index: 10; /*Faz com que o retagunlo fique por cima do vídeo, por padrão as tags recebe um valor z-index, ao colocar um valor maior, você esta dando enfâse e garantido que a ordem que você deseja seja respeitado*/
+
+    /*Centralizando o retangulo*/
+    position: absolute; /*Ele não vai acompanhar o rolamento*/
+    top: 50%; /* Posiciona o topo do elemento no centro vertical da tela */
+    left: 50%; /* Posiciona a esquerda do elemento no centro horizontal da tela, idepedente o do tamanho */
+    transform: translate(-50%, -50%); /* Centraliza o elemento subtraindo metade da sua largura e altura, técnica para centralizar, lembrando que ele trabalha com X e Y*/
+  }
+  .menu--video-ret-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .menu--video-ret-nav-ul{ /*Estilizando e posicionando o <NAV>*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5.625rem; /* 90px / 16px = 5.625rem */
+    margin-left: 6.875rem; /* 110px / 16px = 6.875rem */
+    list-style: none;
+  }
+  /*Estilizando o texto em si do <NAV>*/
+  .nav-sobrenos{
+    text-decoration: none;
+    color: #FFF;
+    font-family: Poppins, sans-serif;
+    font-size: 1.25rem; /* 20px / 16px = 1.25rem */
+    font-style: normal;
+    font-weight: 275;
+    line-height: normal;
+    letter-spacing: 0.3125rem; /* 5px / 16px = 0.3125rem */
+  }
+  .nav-agendar{
+    text-decoration: none;
+    color: #FFF;
+    font-family: Poppins, sans-serif;
+    font-size: 1.25rem; /* 20px / 16px = 1.25rem */
+    font-style: normal;
+    font-weight: 275;
+    line-height: normal;
+    letter-spacing: 0.3125rem; /* 5px / 16px = 0.3125rem */
+  }
+  /*Inciando estilização de Logomarca*/
+    .menu--video-ret-logo-area{ /*Controlando a posição do texto e da logomarca em linha*/
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.3125rem; /* 5px / 16px = 0.3125rem */
+    }
+    .menu--video-ret-logo-img{ /*Controlando tamanho da logomarca*/
+      object-fit: contain;
+      width: 3.125rem; /* 50px / 16px = 3.125rem */
+      height: 3.125rem; /* 50px / 16px = 3.125rem */
+    }
+    .texto-logo-area{ /*Controlando texto em coluna*/
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0px;
+    }
+    .texto-logo{
+      color: #FFF;
+      text-shadow: 0px 0.375rem 0.75rem rgba(0, 0, 0, 0.24); /* 6px / 16px = 0.375rem, 12px / 16px = 0.75rem */
+      font-family: "Puppies Play";
+      font-size: 1.75rem; /* 28px / 16px = 1.75rem */
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin: 0px;
+    }
+    .texto2-logo{
+      color: #FFF;
+      text-shadow: 0px 0.375rem 0.75rem rgba(0, 0, 0, 0.24); /* 6px / 16px = 0.375rem, 12px / 16px = 0.75rem */
+      font-family: Poppins;
+      font-size: 0.625rem; /* 10px / 16px = 0.625rem */
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      margin: 0px; 
+    }
+/*FIM DE ESTILIZAÇÃO DO MENU
+
+Estilização do marketing*/
+  .marketing{
+      background-color: rgb(255, 255, 255);
+      width: 100%;
+      height: 31.25rem; /* 500px / 16px = 31.25rem */
+  }
+  .marketing--area{
+      display: grid; /*Vou usar modelo de grade para colocar o texto e a imagem lado a lado*/
+      grid-template-columns: 1fr 2fr; /*Definindo colunas e o tamanho delas*/
+  }
+  .marketing--img{
+      height: 35.25rem; /* 500px / 16px = 31.25rem */
+  }
+  .marketing--texto{
+      color: var(--C1, #ED6CA5);
+      font-family: Poppins, sans-serif;
+      font-style: normal;
+      line-height: normal; /*Espaço entre o texto*/
+      text-align: center;
+      margin-right: 5rem;
+      text-shadow: 0rem 0.0625rem .1875rem 0rem rgba(0, 0, 0, 0.12);
   }
   .marketing--texto-titulo{
-
+      font-size: 2.9rem; /* Aqui mantive em 'em' pois parece ser intencional ser relativo ao pai */
+      text-transform: uppercase; /*Letras maiúsculas*/ 
   }
+  .marketing--texto-titulo2{
+      font-weight: 350;
+  }
+  .marketing-p{
+      font-size: 1.3rem;
+  }
+  .marketing--butao{/*ESTILIZANDO O BOTAO*/
+    /*botão*/
+    background-color: #ED6CA5;
+    margin-top: 5rem;
+    width: 18rem;
+    height: 3rem;
+    border-radius: 0.8rem;
+    border-style: solid;
+    border-color: #ED6CA5;
+    box-shadow: 0rem 0.0625rem 0.1875rem 0rem rgba(0, 0, 0, 0.12);
+  }
+  .marketing--butao-texto{ /*ESTILIZANDO O TEXTO DO BOTAO*/
+    /*texto*/
+    color: #FFF;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-decoration:none;
+  }
+/*FIM ESTILIZAÇÃO DA ÁREA MARKETING
+  
+  
+Inicio da estilização da área do serviço. 
+  • A ideia é utilizar grid para colocar as imagens lado a lado e para mudar a cor delas, irei definir o    background da tag pai de cada imagem e depois controlar a opacidade da imagem. */
+  .servicos{
+    text-transform: uppercase;
+    font-family: Poppins, sans-serif;
+    padding: 5rem;
+  }
+  .servicos--area-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  /*DIV com a background definida para deixar as imagens transparentes e ajustando as bordas*/
+  .servicos--area-img1{
+    background-color: #ED6CA5;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+  .servicos--area-img2{
+    background-color: #047ACC;
+  }
+  .servicos--area-img3{
+    background-color: #FF7C90;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+  /*Ajustando tamanho das imagens na TAG pai e estilizando as imagens*/
+  .servicos--area-img1, .servicos--area-img2, .servicos--area-img3{
+    box-shadow: 0px 0.0625rem 0.1875rem rgba(0, 0, 0, 0.12);
+    position: relative; /*Ajustando para colocar o texto por cima*/
+    height: 500px;
+    width: 100%;
+  }
+  .servicos--texto1, .servicos--texto2, .servicos--texto3{
+    position: absolute; /*Ajustando para colocar o texto por cima*/
+    /*Centralizando texto*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*Estilizando texto*/
+    color: #FFF;
+    font-size: 30px;
+    letter-spacing: 9px;
+    /*Garantido que o texto fique por cima da DIV e imagens*/
+    z-index: 5;
+  }
+  .servicos--img1, .servicos--img2, .servicos--img3{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4; /*Opacidade da IMG*/
+    filter: contrast(150%); /*Contraste da img*/
+  }
+  /*Borda das imagens*/
+  .servicos--img1{
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+  .servicos--img3{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;    
+  }  
+  .servicos--grid-titulo{
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    align-items: center;
+  }
+  .servicos--linha{
+    box-shadow: 0px 0.0625rem 0.1875rem rgba(0, 0, 0, 0.12);
+    background-color: #ED6CA5;
+    width: 100%;
+    height: 2px;
+  }
+  .servicos--titulo h3{
+    font-weight: 400;
+    color: #ED6CA5;
+    font-size: 20px;
+  }
+/*Fim estilização da área de serviços
+
+Inicio da estilização da área de produtos, a ideia e fazer um carrosel com as imagens*/
+  .produto1-img, .produto2-img, .produto3-img{
+    width: 100%px;
+    height: 300px;
+  }
+  .produtos--area-carrosel{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 50px;
+  }
+
+  
