@@ -144,7 +144,6 @@ Estilização do marketing*/
       height: 35.25rem; /* 500px / 16px = 31.25rem */
   }
   .marketing--texto{
-      color: var(--C1, #ED6CA5);
       font-family: Poppins, sans-serif;
       font-style: normal;
       line-height: normal; /*Espaço entre o texto*/
@@ -153,6 +152,7 @@ Estilização do marketing*/
       text-shadow: 0rem 0.0625rem .1875rem 0rem rgba(0, 0, 0, 0.12);
   }
   .marketing--texto-titulo{
+      color: #ED6CA5;
       font-size: 2.9rem; /* Aqui mantive em 'em' pois parece ser intencional ser relativo ao pai */
       text-transform: uppercase; /*Letras maiúsculas*/ 
   }
@@ -165,7 +165,7 @@ Estilização do marketing*/
   .marketing--butao{/*ESTILIZANDO O BOTAO*/
     /*botão*/
     background-color: #ED6CA5;
-    margin-top: 5rem;
+    margin-top: 10px;/*VALOR FIXO*/
     width: 18rem;
     height: 3rem;
     border-radius: 0.8rem;
@@ -266,17 +266,79 @@ Inicio da estilização da área do serviço.
   }
 /*Fim estilização da área de serviços
 
-Inicio da estilização da área de produtos, a ideia e fazer um carrosel com as imagens*/
-  .produto1-img, .produto2-img, .produto3-img{
-    width: 100%px;
-    height: 300px;
-  }
-  .produtos--area-carrosel{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 50px;
-  }
 
-  
+
+
+
+
+Inicio da estilização da área de produtos, a ideia e fazer um carrosel com as imagens*/
+ .produtos{
+    margin-right: 0px;
+ }
+ .produtos--img{
+    /*Estilizar a <IMG> dos produtos*/
+    max-width: auto;
+    height: 300px;
+ }
+ #produtos--area{
+    width: auto;
+    margin: 0 auto; /*Verificar o pq disso*/
+    overflow: hidden; /*Pesquisar sobre*/
+ }
+ #produtos--slider1-area{
+  overflow: hidden; /*Acho redudante*/
+ }
+ .produtos--animacao-area{
+  width: 100%; /*Para que fique fora da tela, ultrapasse as bordas*/
+  transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); /*Pesquisar sobre*/
+  display: flex; /*Para os produtos ficar um ao lado do outro*/
+ }
+ .produtos--area-img{
+  width: 100%;
+  flex-shrink: 0; /*Não deixa encolher*/
+  display: flex; /*Sem ele os produtos fica um em baixo do outro, seguindo a linha "Y"*/
+  align-items: center; /*Centralizar linha Y*/
+  justify-content: center; /*Centralizar linha X*/
+  padding: 8px;
+ }
+
+
+ /*Movimentação dos slides, oque esta acontecendo aqui?
+  Quando alguns dos <type=radio> for selecionado/checked ele irá conectar <~> a area do slide e a animação alterando a margem, ou seja, vai fazer a movimentação com a animação.
+ */
+#produtos--slider1:checked ~ #produtos--slider1-area .produtos--animacao-area {
+  margin-left: 0;
+}
+#produtos--slider2:checked ~ #produtos--slider1-area .produtos--animacao-area {
+  margin-left: -100%;
+}
+
+
+/* Estilização das bolinhas*/
+#produtos--bolinhas {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Cor da bolinha selecionada */
+#produtos--slider1:checked ~ #produtos--bolinhas label:nth-child(1) {
+  background:#047ACC;
+}
+#produtos--slider2:checked ~ #produtos--bolinhas label:nth-child(2) {
+  background:#047ACC;
+}
+
+#produtos--bolinhas label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e7c8c8;
+  margin: 0 10px;
+  cursor: pointer;
+}
+/*Ajuste fino, ocultando bolinhas do input radio*/
+#produtos--area input[type="radio"]{
+  display: none;
+}
+

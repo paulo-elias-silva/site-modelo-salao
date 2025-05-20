@@ -74,25 +74,61 @@
             </div>
         </div>        
     </section>
+
+
+
+
+<!--Deixar essa parte destacada e separada pois vai dar um pouco de trabalho e preciso deixar mais fácil para revisar
+    Depois de quebrar a cabeça tentando fazer o carrosel sem JS apenas com HTML e CSS, estava indo para um caminho de utilizar a tag <a>, a ideia era que utilizar a tag <a> para navegar no carrosel e depois no CSS fazer o controle de exibição de tela e "animações" porém nesse caminho não obtive sucesso. 
+
+    Após algumas pesquisas de outros metódos, optei por tentar novamente porém utilizando a tag <input type = rádio> para fazer a navegação dos slides.
+
+    Para evitar bugs, mudei um pouco a abordagem nesse trecho, utilizei <ID> para TAG's que não irei estilizar em conjunto e <CLASS> para TAG's que irá ser estilizada em conjunto.
+-->
     <section class="produtos">
-        <div class="produtos--area"> <!--Vai englobar todos as div do produto-->
-            <div class="produtos--area-carrosel">
-                <div class="produto1">
-                    <div class="texto--produto1"></div>
-                    <img  class="produto1-img" src="assets/Esmalte-sf.png" alt="esmalte">
-                </div>
-                <div class="produto2">
-                    <div class="texto--produto2"></div>
-                    <img class="produto2-img" src="assets/Creme sem fundo.png" alt="creme">
-                </div>
-                <div class="produto3">
-                    <div  class="texto--produto3"></div>
-                    <img class="produto3-img" src="assets/Pote_azul-sf.png" alt="pote azul">
+        <div id="produtos--area">
+            <!--Essa TAG (input type="radio") cria botões. O atributo checked é booleano. Sendo assim, através desses elementos, ela cria um espaço com um conjunto de botões que fica no "name". E, através do atributo booleano, ele faz com que apenas uma área/slider fique visível e selecionado por vez.-->
+            <input type="radio" name="produtos--slider" id="produtos--slider1" checked>
+            <input type="radio" name="produtos--slider" id="produtos--slider2">
+            <div id="produtos--slider1-area">
+                <div id="produtos--overflow">
+                    <div class="produtos--animacao-area">
+                        <div class="produtos--area-img">
+                            <div class="produtos">
+                                <img class="produtos--img" src="assets/Creme sem fundo.png" alt="Creme1"/>
+                            </div>
+                            <div class="produtos">
+                                <img class="produtos--img" src="assets/Esmalte-sf.png" alt="esmalte1"/>
+                            </div>
+                            <div class="produtos">
+                                <img class="produtos--img" src="assets/Pote_azul-sf.png" alt="Creme azul1"/>
+                            </div>
+                        </div>    
+                        <div  class="produtos--area-img">
+                            <div class="produtos">
+                                <img class="produtos--img" src="assets/Esmalte-sf.png" alt="esmalte2">
+                            </div>
+                            <div class="produtos">
+                                <img class="produtos--img" src="assets/Creme sem fundo.png" alt="creme2">
+                            </div>
+                            <div class="produtos">
+                                    <img class="produtos--img" src="assets/Esmalte-sf.png" alt="esmalte2"/>
+                            </div> 
+                        </div>
+                    </div>
                 </div>
             </div>
-
+            <div id="produtos--bolinhas">
+                <!-- Facilitando a seleção das bolinhas e também a estilização no CSS através do checked-->
+                <label for="produtos--slider1"></label>
+                <label for="produtos--slider2"></label>
+            </div>
         </div>
     </section>
+<!--------------------------------------------------------------------------------------->
+
+
+
     <footer>        
     </footer>
     
