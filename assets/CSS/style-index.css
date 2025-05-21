@@ -348,8 +348,79 @@ Inicio da estilização da área de produtos, a ideia e fazer um carrosel com as
 
 
 Inicio estilização do footer
+Meu objetivo é fazer um modelo por isso não coloquei link's para quando o usuário clicar e ir para um site de rede social da empresa ou o app ↓↓
 */
-footer{
-  margin-top: 200px;
-  width: 100%;
-}
+  h4{ /*H1 ate H6 tem algumas margens padrão*/
+    margin: 0;
+    padding: 0;
+  }
+  footer{
+    height: auto;
+    width: auto;
+  }
+  #footer--area-azul{
+    background-color: #047ACC;
+    height: 100%;
+  }
+  .footer--texto{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: Poppins, sans-serif;
+    text-align: center;
+    padding: 10px 0px;
+  }
+  #footer--texto1{ /*TEXTO 1 TAMANHO*/
+    color:  #ffffff;
+    font-weight: 250;
+    font-size: 40px;
+  }
+  #texto1-2{
+    font-size: 50px;/*TEXTO1-2 TAMANHO*/
+  }
+  .footer--img{ 
+    height: auto;
+    width: auto;
+  }
+  #footer--store, 
+  #footer--google{ /*IMG TAMANHO*/
+    height: 100px;
+    width: auto;
+  }
+  #footer--img-area{ /*IMG FLEX*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  #footer--texto2{/*TEXTO-SOCIAL TAMANHO*/
+    font-size: 30px;
+    font-weight: 250;
+    color: #FFF;
+  }
+  #footer--social-img{ /*SOCIAL FLEX*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 10px;
+  }
+  #footer--insta,
+  #footer--face{ /*SOCIAL-IMG TAMANHO*/
+    height: 40px;
+    width: 40px;
+  }
+  #footer--area-rosa{
+    background-color:#FF7C90;
+  }
+  #footer--texto3{
+    color: black;
+    font-weight: 350;
+    padding: 10px;
+  }
+  #dev{
+    font-style: italic;
+  }
