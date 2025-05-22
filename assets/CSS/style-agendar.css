@@ -22,7 +22,7 @@ body{
         width: 100%;
         padding: 80px;
         background-color: rgb(255, 255, 255); 
-    }
+      }
   .menu--ret{  /*Estilização do retângulo*/
         background-color: #ED6CA5;
         border-radius: 3.125rem; 
@@ -41,12 +41,12 @@ body{
         top: 50%; /* Posiciona o topo do elemento no centro vertical da tela */
         left: 50%; /* Posiciona a esquerda do elemento no centro horizontal da tela, idepedente o do tamanho */
         transform: translate(-50%, -50%); /* Centraliza o elemento subtraindo metade da sua largura e altura, técnica para centralizar, lembrando que ele trabalha com X e Y*/
-  }
+      }
   .menu--ret-nav{
         display: flex;
         flex-direction: row;
         align-items: center;
-  }
+      }
   .menu--ret-nav-ul{ /*Estilizando e posicionando o <NAV>*/
         display: flex;
         flex-direction: row;
@@ -54,7 +54,7 @@ body{
         gap: 5.625rem; 
         margin-left: 6.875rem; 
         list-style: none;
-  }
+      }
   /*Estilizando o texto em si do <NAV>*/
   .nav-sobrenos{
         text-decoration: none;
@@ -65,7 +65,7 @@ body{
         font-weight: 275;
         line-height: normal;
         letter-spacing: 0.3125rem; 
-  }
+      }
   .nav-voltar{
         text-decoration: none;
         color: #FFF;
@@ -75,48 +75,53 @@ body{
         font-weight: 275;
         line-height: normal;
         letter-spacing: 0.3125rem;
-  }
+        }
   /*Inciando estilização de Logomarca*/
     .menu--ret-logo-area{ /*Controlando a posição do texto e da logomarca em linha*/
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 0.3125rem; 
-    }
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.3125rem; 
+      }
     .menu--ret-logo-img{ /*Controlando tamanho da logomarca*/
-      object-fit: contain;
-      width: 3.125rem; 
-      height: 3.125rem; 
-    }
+            object-fit: contain;
+            width: 3.125rem; 
+            height: 3.125rem; 
+      }
     .texto-logo-area{ /*Controlando texto em coluna*/
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0px;
-    }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0px;
+      }
     .texto-logo{
-      color: #FFF;
-      text-shadow: 0px 0.375rem 0.75rem rgba(0, 0, 0, 0.24); /* 6px / 16px = 0.375rem, 12px / 16px = 0.75rem */
-      font-family: "Puppies Play";
-      font-size: 1.75rem; /* 28px / 16px = 1.75rem */
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      margin: 0px;
-    }
+            color: #FFF;
+            text-shadow: 0px 0.375rem 0.75rem rgba(0, 0, 0, 0.24); /* 6px / 16px = 0.375rem, 12px / 16px = 0.75rem */
+            font-family: "Puppies Play";
+            font-size: 1.75rem; /* 28px / 16px = 1.75rem */
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin: 0px;
+      }
     .texto2-logo{
-      color: #FFF;
-      text-shadow: 0px 0.375rem 0.75rem rgba(0, 0, 0, 0.24); /* 6px / 16px = 0.375rem, 12px / 16px = 0.75rem */
-      font-family: Poppins;
-      font-size: 0.625rem; /* 10px / 16px = 0.625rem */
-      font-style: normal;
-      font-weight: 300;
-      line-height: normal;
-      margin: 0px; 
-    }
+            color: #FFF;
+            text-shadow: 0px 0.375rem 0.75rem rgba(0, 0, 0, 0.24); /* 6px / 16px = 0.375rem, 12px / 16px = 0.75rem */
+            font-family: Poppins;
+            font-size: 0.625rem; /* 10px / 16px = 0.625rem */
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            margin: 0px; 
+      }
 /*FIM DE ESTILIZAÇÃO DO MENU  
   
 /*Footer*/
+  footer{
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+  }
   #footer--area-rosa{/*FOOTER AREA ROSA*/
         background-color:#FF7C90;
         box-shadow: 0px 0.0625rem 0.1875rem rgba(0, 0, 0, 0.12);
@@ -125,23 +130,23 @@ body{
         font-family: Poppins, sans-serif;
         text-align: center;
         padding: 10px 0px;
-  }
+      }
   #footer--texto3{
         color: black;
         font-weight: 350;
         padding: 10px;
-  }
+      }
   #dev{
         font-style: italic;
-  }
+      }
 
 /*Conteúdo da pág*/
   .formulario--texto{
         font-family: Poppins, sans-serif;
-  }
+      }
   .formulario--label{
         opacity: 0;
-  }
+      }
   .formulario--input{ /*estilizando o o input*/
         font-family: Poppins, sans-serif;
         font-weight: 400;
@@ -154,20 +159,20 @@ body{
         box-shadow: 0px 0.0625rem 0.1875rem rgba(0, 0, 0, 0.12);
         letter-spacing: 1px;
         
-  }
+      }
   #titulo{
         margin: 0;
         padding: 0; /*<H2> tem o um padrao de margem e padding*/
         font-weight: 450;
         text-align: center;
         gap: 10px;
-  }
+      }
   form{
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-bottom: 50px;
-  }
+      }
   #formulario--botao{
         margin-top: 50px;
         height: 60px;
