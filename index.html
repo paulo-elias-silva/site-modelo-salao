@@ -77,14 +77,14 @@
 
 
 
-
+        
     <!--Deixar essa parte destacada e separada pois vai dar um pouco de trabalho e preciso deixar mais fácil para revisar
         Depois de quebrar a cabeça tentando fazer o carrosel sem JS apenas com HTML e CSS, estava indo para um caminho de utilizar a tag <a>, a ideia era que utilizar a tag <a> para navegar no carrosel e depois no CSS fazer o controle de exibição de tela e "animações" porém nesse caminho não obtive sucesso. 
 
         Após algumas pesquisas de outros metódos, optei por tentar novamente porém utilizando a tag <input type = rádio> para fazer a navegação dos slides.
 
         Para evitar bugs, mudei um pouco a abordagem nesse trecho, utilizei <ID> para TAG's que não irei estilizar em conjunto e <CLASS> para TAG's que irá ser estilizada em conjunto.
-    -->
+     -->
         <section class="produtos">
             <div id="produtos--area">
                 <!--Essa TAG (input type="radio") cria botões. O atributo checked é booleano. Sendo assim, através desses elementos, ela cria um espaço com um conjunto de botões que fica no "name". E, através do atributo booleano, ele faz com que apenas uma área/slider fique visível e selecionado por vez.-->
@@ -118,7 +118,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="produtos--bolinhas">
+                <div id="produtos--bolinhas">                  <!-- Facilitando a seleção das bolinhas e também a estilização no CSS através do checked-->
                     <label for="produtos--slider1"></label>
                     <label for="produtos--slider2"></label>
                 </div>
@@ -129,15 +129,13 @@
         <footer>
             <div id="footer--area">
                 <div id="footer--area-azul">
-                    <div class="footer--texto"><h4 id="footer--texto1"> Para obter promoções exclusivas <span  id="texto1-2" class="negrito"><br>faça download do aplicativo</span></h4>
+                    <div class="footer--texto"><h4 id="footer--texto1"> Para obter promções exclusivas <span class="negrito">faça download do aplicativo</span></h4>
                     </div>
-                    <div id="footer--img-area">
-                        <div class="footer--img"> 
-                            <img id="footer--google" src="assets/ANDROID.png" alt="Google Play"/>
-                        </div>
-                        <div class="footer--img">
-                            <img id="footer--store" src="assets/IOS.png" alt="App Store"/>
-                        </div>
+                    <div class="footer--img"> 
+                        <img id="footer--google" src="assets/ANDROID - SF.png" alt="Google Play"/>
+                    </div>
+                    <div class="footer--img">
+                        <img id="footer--store" src="assets/IOS - SF.png" alt="App Store"/>
                     </div>
                     <div class="footer--texto">
                         <div class="footer--texto"><h4 id="footer--texto2">Acompanhe nas redes sociais</h4></div>
@@ -149,9 +147,9 @@
                 </div>
             </div>
             <div id="footer--area-rosa">
-                <div class="footer--texto" id="footer--texto3">© 2025 TODOS OS DIREITOS RESERVADOS 
-                    <br><span id="dev">Desenvolvido por Paulo</span></div>
+                <h4 class="footer--texto" id="footer--texto3">© 2025 TODOS OS DIREITOS RESERVADOS 
+                    Desenvolvido por Paulo</h4>
             </div>        
-        </footer> 
+        </footer>    
     </body>
 </html>
