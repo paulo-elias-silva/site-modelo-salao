@@ -203,16 +203,16 @@ Inicio da estilização da área do serviço.
   /*DIV com a background definida para deixar as imagens transparentes e ajustando as bordas*/
   .servicos--area-img1{
     background-color: #ED6CA5;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;          /*VALOR FIXO DAS BORDAS*/
+    border-bottom-left-radius: 50px;       /*VALOR FIXO DAS BORDAS*/
   }
   .servicos--area-img2{
     background-color: #047ACC;
   }
   .servicos--area-img3{
     background-color: #FF7C90;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;     /*VALOR FIXO DAS BORDAS*/
+    border-bottom-right-radius: 50px; /*VALOR FIXO DAS BORDAS*/
   }
   /*Ajustando tamanho das imagens na TAG pai e estilizando as imagens*/
   .servicos--area-img1, .servicos--area-img2, .servicos--area-img3{
@@ -229,8 +229,8 @@ Inicio da estilização da área do serviço.
     transform: translate(-50%, -50%);
     /*Estilizando texto*/
     color: #FFF;
-    font-size: 30px;
-    letter-spacing: 9px;
+    font-size: 1.8rem;
+    letter-spacing: 0.56rem;
     /*Garantido que o texto fique por cima da DIV e imagens*/
     z-index: 5;
   }
@@ -259,12 +259,12 @@ Inicio da estilização da área do serviço.
     box-shadow: 0px 0.0625rem 0.1875rem rgba(0, 0, 0, 0.12);
     background-color: #ED6CA5;
     width: 100%;
-    height: 2px;
+    height: 0.13rem;
   }
   .servicos--titulo h3{
     font-weight: 400;
     color: #ED6CA5;
-    font-size: 20px;
+    font-size: 1.1rem;
   }
 /*Fim estilização da área de serviços
 
@@ -301,7 +301,7 @@ Inicio da estilização da área de produtos, a ideia e fazer um carrosel com as
   display: flex; /*Sem ele os produtos fica um em baixo do outro, seguindo a linha "Y"*/
   align-items: center; /*Centralizar linha Y*/
   justify-content: center; /*Centralizar linha X*/
-  padding: 8px;
+  padding: 0,6rem;
  }
 
 
@@ -319,7 +319,7 @@ Inicio da estilização da área de produtos, a ideia e fazer um carrosel com as
 /* Estilização das bolinhas*/
 #produtos--bolinhas {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 /* Cor da bolinha selecionada */
@@ -332,11 +332,11 @@ Inicio da estilização da área de produtos, a ideia e fazer um carrosel com as
 
 #produtos--bolinhas label {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 0.7rem;
+  height: 0.7rem;
   border-radius: 50%;
   background: #e7c8c8;
-  margin: 0 10px;
+  margin: 0 0.7rem;
   cursor: pointer;
 }
 /*Ajuste fino, ocultando bolinhas do input radio*/
@@ -356,7 +356,7 @@ Meu objetivo é fazer um modelo por isso não coloquei link's para quando o usu�
   }
   footer{
     height: auto;
-    width: auto;black: 76px;
+    width: auto;
   }
   #footer--area-azul{
     background-color: #047ACC;
@@ -364,27 +364,30 @@ Meu objetivo é fazer um modelo por isso não coloquei link's para quando o usu�
     box-shadow: 0px 0.0625rem 0.1875rem rgba(0, 0, 0, 0.12);
   }
   .footer--texto{
-    letter-spacing: 3px;
+    letter-spacing: 0.18rem;
     text-transform: uppercase;
     font-family: Poppins, sans-serif;
     text-align: center;
-    padding: 10px 0px;
+    padding: 0.7rem 0rem;
   }
   #footer--texto1{ /*TEXTO 1 TAMANHO*/
     color:  #ffffff;
     font-weight: 250;
-    font-size: 40px;
+    font-size: 2.5rem;
   }
   #texto1-2{
-    font-size: 50px;/*TEXTO1-2 TAMANHO*/
+    font-size: 3.2rem;/*TEXTO1-2 TAMANHO*/
   }
   .footer--img{ 
+    display: flex;
+    flex-direction: column; /*Centralizando IMG */
+    align-items: center;
     height: auto;
     width: auto;
   }
   #footer--store, 
   #footer--google{ /*IMG TAMANHO*/
-    height: 100px;
+    height: 6.25rem;
     width: auto;
   }
   #footer--img-area{ /*IMG FLEX*/
@@ -393,10 +396,10 @@ Meu objetivo é fazer um modelo por isso não coloquei link's para quando o usu�
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 2.5rem;
   }
   #footer--texto2{/*TEXTO-SOCIAL TAMANHO*/
-    font-size: 30px;
+    font-size: 1.8rem;
     font-weight: 250;
     color: #FFF;
   }
@@ -406,13 +409,13 @@ Meu objetivo é fazer um modelo por isso não coloquei link's para quando o usu�
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding-bottom: 10px;
+    gap: 1.2rem;
+    padding-bottom: 0.7rem;
   }
   #footer--insta,
   #footer--face{ /*SOCIAL-IMG TAMANHO*/
-    height: 40px;
-    width: 40px;
+    height: 2.5rem;
+    width: 2.5rem;
   }
   #footer--area-rosa{/*FOOTER AREA ROSA*/
     background-color:#FF7C90;
@@ -421,8 +424,18 @@ Meu objetivo é fazer um modelo por isso não coloquei link's para quando o usu�
   #footer--texto3{
     color: black;
     font-weight: 350;
-    padding: 10px;
+    padding: 0.7rem;
   }
   #dev{
     font-style: italic;
   }
+
+
+  /*----------------RESPONSIVO 4K----------------------------------*/
+    @media(min-width: 2159px) and (max-width:3840px){
+      html{
+      font-size: 32px; /* Ajustando "REM" */
+      } 
+    }
+  /*----------------Tablet está OK----------------------------------*/
+

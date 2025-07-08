@@ -4,23 +4,38 @@
 html{
   font-size: 16px; /* Tamanho de fonte base */
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 * {
   box-sizing: border-box;
 }
 body{
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    text-shadow: 0rem 0.05rem 0.06rem rgba(0, 0, 0, 0.16);
-    display: flex;
-    flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+main{
+  flex: 1 1 0; /*Ajustando flooter no fim da página.
+  Seria bom organizar o conteudo da seguinte forma: 
+  <html>
+  <head></>
+  <body>
+   <header>
+   <main>
+   <footer>
+  </> 
+  
+  
+  */
 }
 /*MENU*/
     .menu--area{
         position: relative;
         width: 100%;
-        padding: 80px;
+        padding: 6.25rem;
         background-color: rgb(255, 255, 255); 
       }
   .menu--ret{  /*Estilização do retângulo*/
@@ -118,9 +133,8 @@ body{
   
 /*Footer*/
   footer{
-      position: fixed;
       width: 100%;
-      bottom: 0;
+      padding: 0;
   }
   #footer--area-rosa{/*FOOTER AREA ROSA*/
         background-color:#FF7C90;
@@ -150,7 +164,7 @@ body{
   .formulario--input{ /*estilizando o o input*/
         font-family: Poppins, sans-serif;
         font-weight: 400;
-        font-size:20px;
+        font-size:1.25rem;
         font-style: bold;
         border-radius: 10px;
         background-color: rgb(209, 208, 208);
@@ -165,26 +179,40 @@ body{
         padding: 0; /*<H2> tem o um padrao de margem e padding*/
         font-weight: 450;
         text-align: center;
-        gap: 10px;
+        gap: 0.7rem;
       }
   form{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom: 50px;
+        padding-bottom: 3.12rem;
       }
   #formulario--botao{
-        margin-top: 50px;
-        height: 60px;
+        margin-top: 3.12rem;
+        height: 3.75rem;
         width: 20%;
         background-color:#0479cce3;
-        border-radius: 35px;
+        border-radius: 2.19rem;
         border-color: transparent;
         font-family: Poppins, sans-serif;
         font-weight: 400;
-        font-size:20px;
+        font-size:1rem;
         font-style: bold;
         box-shadow: 0px 0.0625rem 0.1875rem rgba(0, 0, 0, 0.12);
-        letter-spacing: 5px;
+        letter-spacing: 0.32rem;
         color: rgb(255, 255, 255);
+  }
+
+
+/*----------------RESPONSIVO 4K----------------------------------*/
+  @media(min-width: 2159px) and (max-width:3840px){
+    html{
+      font-size: 32px; /* Ajustando "REM" */
+    }     
+  }
+/*----------------Laptop virado-----------------------------------*/
+    @media(min-width:614px) and (max-width:768px){
+      .menu--ret{
+        width: 610px;
+      }
   }

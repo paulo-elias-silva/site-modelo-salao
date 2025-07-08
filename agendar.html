@@ -2,67 +2,70 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><!--Permite que ele fique responsivo-->
         <title>Sabrina Salão | Agendar</title>
         <link rel="stylesheet" href="assets/CSS/style-agendar.css" />
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>  <!--FAVICON - |rel=Informando que é um icone | type=informando o tipo de arquivo (png, jpge, gift, icon,etc) |href=informando o caminho-->
     </head>
     <body>
-        <!--MENU-->
-        <section class="menu">
-            <div class="menu--area">
-                    <div class="menu--ret"> <!-- separando uma area para estilizar   no CSS -->
-                        <div class="menu--ret-nav">
-                            <div class="menu--ret-logo-area">
-                                <a href="index.html"><img class="menu--ret-logo-img" src="assets/Logomarca.png" alt="SALAO SABRINA">
-                                </a>
-                                <div class="texto-logo-area"> <!-- Essa DIV irá funcionar como um bloco para manter o texto em coluna e ficar editável em linha na TAG pai junto com o logomarca-->
-                                    <h1 class="texto-logo">Sabrina</h1>
-                                    <h2 class="texto2-logo">S A L Ã O</h2>
-                                </div>
-                            </div>  
-                            <nav>
-                            <ul class="menu--ret-nav-ul">
-                                <li><a href="sobrenos.html" class="nav-sobrenos">SOBRE  NÓS</a></li>
-                                <li><a href="index.html" class="nav-voltar">VOLTAR</a></li>
-                        </nav>  
+       <header>
+            <!--MENU-->
+            <section class="menu">
+                <div class="menu--area">
+                        <div class="menu--ret"> <!-- separando uma area para estilizar   no CSS -->
+                            <div class="menu--ret-nav">
+                                <div class="menu--ret-logo-area">
+                                    <a href="index.html"><img class="menu--ret-logo-img" src="assets/Logomarca.png" alt="SALAO SABRINA">
+                                    </a>
+                                    <div class="texto-logo-area"> <!-- Essa DIV irá funcionar como um bloco para manter o texto em coluna e ficar editável em linha na TAG pai junto com o logomarca-->
+                                        <h1 class="texto-logo">Sabrina</h1>
+                                        <h2 class="texto2-logo">S A L Ã O</h2>
+                                    </div>
+                                </div>  
+                                <nav>
+                                <ul class="menu--ret-nav-ul">
+                                    <li><a href="sobrenos.html" class="nav-sobrenos">SOBRE  NÓS</a></li>
+                                    <li><a href="index.html" class="nav-voltar">VOLTAR</a></li>
+                            </nav>  
+                            </div>
                         </div>
-                    </div>
-            </div>
-        </section>
-        <!--FIM MENU-->
+                </div>
+            </section>
+        </header>
+        <main>  
+            <!--FIM MENU-->
 
-        <section id="formulario">
-            <h2 class="formulario--texto" id="titulo">Preencha os dados abaixo para agendar:</h2>
+            <section id="formulario">
+                <h2 class="formulario--texto" id="titulo">Preencha os dados abaixo para agendar:</h2>
 
-            <form autocomplete="off"> <!--Por ser apenas um modelo, não estou usando <action> e <method>-->
-                    <label for="nomeCompleto" class="formulario--label">Nome completo:</label>
-                    <input type="text" id="nomeCompleto" name="nomeCompleto" class="formulario--input" placeholder="Nome Completo"/>
+                <form autocomplete="off"> <!--Por ser apenas um modelo, não estou usando <action> e <method>-->
+                        <label for="nomeCompleto" class="formulario--label">Nome completo:</label>
+                        <input type="text" id="nomeCompleto" name="nomeCompleto" class="formulario--input" placeholder="Nome Completo"/>
 
-                    <label for="telefone" class="formulario--label">Telefone:</label>
-                    <input type="text" id="telefone" name="telefone" class="formulario--input" placeholder="Telefone"/>
+                        <label for="telefone" class="formulario--label">Telefone:</label>
+                        <input type="text" id="telefone" name="telefone" class="formulario--input" placeholder="Telefone"/>
 
-                    <label for="servico" class="formulario--label">Telefone:</label>
-                    <input type="text" id="servico" name="servico" class="formulario--input" placeholder="Serviço">
-                    
-                    <label for="horario" class="formulario--label">Horário</label>
-                    <input type="text" id="horario" name="horario" class="formulario--input" placeholder="Horário">
+                        <label for="servico" class="formulario--label">Telefone:</label>
+                        <input type="text" id="servico" name="servico" class="formulario--input" placeholder="Serviço">
+                        
+                        <label for="horario" class="formulario--label">Horário</label>
+                        <input type="text" id="horario" name="horario" class="formulario--input" placeholder="Horário">
 
-                    <label for="data" class="formulario--label">Data</label>
-                    <input type="text" id="data" name="data" class="formulario--input" placeholder="Data">
+                        <label for="data" class="formulario--label">Data</label>
+                        <input type="text" id="data" name="data" class="formulario--input" placeholder="Data">
 
-                    <button type="submit" id="formulario--botao">AGENDAR</button>
-                    
-            </form>
+                        <button type="submit" id="formulario--botao">AGENDAR</button>
+                        
+                </form>
 
-        </section>
-
+            </section>
+        </main>
         <!--FOOTER-->          
         <footer>
             <div id="footer--area-rosa">
                 <div class="footer--texto" id="footer--texto3">© 2025 TODOS OS DIREITOS RESERVADOS 
                     <br><span id="dev">Desenvolvido por Paulo</span></div>
             </div>        
-        </footer> 
+        </footer>     
     </body>
 </html>

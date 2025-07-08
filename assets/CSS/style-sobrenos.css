@@ -13,7 +13,12 @@ body{
     height: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
     text-shadow: 0px 0.05px 0.06px rgba(0, 0, 0, 0.16);
+}
+main{
+  flex: 1 1 0; 
 }
 .negrito{
     font-weight: bold;
@@ -45,24 +50,24 @@ h1, h2, h3, h4{
     }
     #menu-ret{ /*Estilizando ret rosa*/
         background-color:#ED6CA5;
-        border-radius: 20px;
-        width: 500px;
+        border-radius: 1.25rem;
+        width: 31.35rem;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
-        height: 50px;
+        height: 3.2rem;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin: 60px 0px;
+        margin: 3.75rem 0;
     }
     .nav-texto{
         text-transform: uppercase;
         font-family: Poppins, sans-serif;
         text-decoration: none;
         color: rgb(255, 255, 255);
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: 200;
-        letter-spacing: 3px;
+        letter-spacing: 0.19rem;
     }
     #menu-ret-nav-ul{ /*Texto do ret rosa*/
         display: flex;
@@ -72,8 +77,8 @@ h1, h2, h3, h4{
         list-style: none;
     }
     #menu-logo-img{ /*TAMANHO IMAGEM*/
-        width: 300px;
-        height: 300px;
+        width: 18.75rem;
+        height: 18.75rem;
     }
     #texto-logo-area, #menu-logo-area{
         display: flex;
@@ -86,7 +91,7 @@ h1, h2, h3, h4{
         color: #FFF;
         text-shadow: 0px 0.375rem 0.75rem rgba(0, 0, 0, 0.24); /* 6px / 16px = 0.375rem, 12px / 16px = 0.75rem */
         font-family: "Puppies Play";
-        font-size: 80px;
+        font-size: 5rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -97,7 +102,7 @@ h1, h2, h3, h4{
         color: #FFF;
         text-shadow: 0px 0.375rem 0.75rem rgba(0, 0, 0, 0.24); /* 6px / 16px = 0.375rem, 12px / 16px = 0.75rem */
         font-family: Poppins;
-        font-size:20px;
+        font-size:1.25rem;
         font-style: normal;
         font-weight: 300;
         line-height: normal;
@@ -110,7 +115,6 @@ h1, h2, h3, h4{
 
 /*Footer*/
 footer{
-    bottom: 0;
     width: 100%;
 }
 #footer-area-rosa{/* FOOTER AREA ROSA */
@@ -124,7 +128,7 @@ footer{
 #footer-texto3{
     color: black;
     font-weight: 350;
-    padding: 10px;
+    padding: 0.7rem;
 }
 #dev{
     font-style: italic;
@@ -136,6 +140,21 @@ footer{
     color: #FFF;
     text-transform: uppercase;
     font-family: Poppins, sans-serif;
-    margin: 50px;
+    margin: 3.13rem;
     height: auto;
 }
+
+
+/*----------------RESPONSIVO 4K----------------------------------*/
+  @media(min-width: 2159px) and (max-width:3840px){
+    html{
+    font-size: 32px; /* Ajustando "REM" */
+    }     
+  }
+  @media(min-width: 1536px) and (max-width:2560px){
+    html{
+    font-size: 32px; /* Ajustando "REM" */
+    }     
+  }  
+/*----------------Tablet está OK----------------------------------*/
+
