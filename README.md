@@ -23,7 +23,7 @@ Este é um projeto pessoal criado do zero para aprimorar minhas habilidades em H
   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain-wordmark.svg" />
 
 
-  🔗Link do site: ###
+  🔗Link do site: https://paulo-elias-silva.github.io/site-modelo-salao/
 
 
 
